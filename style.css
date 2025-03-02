@@ -4,7 +4,7 @@
 }
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url('assests/backgroun.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,6 +17,8 @@ body{
 }
 .navContainer{
     width: 100%;
+    position: fixed;
+    z-index: 3;
      
 }
 .navContent{
@@ -29,6 +31,130 @@ body{
     gap: 30px;
     font-size: 20px;
     font-weight: bold;
-   text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    color: white;
+   text-shadow: 2px 2px 5px rgb(0, 0, 0);
     list-style: none;
+}
+.main-body{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-content{
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    align-items: center;
+    position: fixed;
+    z-index: -1;
+   
+
+}
+.main-content h1{
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-content button{
+    margin-top: 10px;
+      padding: 10px;
+      border-radius: 4mm;
+}
+.content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(62, 45, 26);
+    padding: 40px 0px;
+}
+.content-right h2{
+        font-size: 50px;
+        color: rgb(253, 225, 193);
+
+}
+.content-right h4{
+ color: white;
+}
+.content-right button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4mm;
+    font-size: 17px;
+    font-weight: 600;
+    background-color:rgb(253, 225, 193); 
+
+}
+.contact{
+    width: 100%;
+    height: auto;
+    
+    background-image: url('assests/backgroun.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contact-container{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.592);
+
+}
+.contact-content{
+    padding: 30px;
+    background-color: rgba(35, 26, 16, 0.787);;
+    border-radius: 5mm;
+    display: flex;
+    width: 60%;
+}
+.contact-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.contact-right{
+    width: 50%;
+}
+.contact-right img{
+    width: 100%;
+    object-fit: cover;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+.contact-form input,textarea{
+    padding: 3px;
+    background-color: rgb(245, 235, 220);
+    width: 80%;
+}
+
+@media (max-width: 500px){
+    .contact-right{
+        display: none;
+    }
+    .contact-left{
+        width: 100%;
+    }
 }
