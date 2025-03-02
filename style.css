@@ -105,6 +105,9 @@ body{
     filter: drop-shadow(5px 5px 20px rgba(168, 160, 160, 0.632)) ;
 }
 
+.section-two{
+    background-color: rgb(60, 36, 36);
+}
 .section-two .right img {
     position: relative;
     animation: move 2s linear infinite alternate; /* Animation */
@@ -191,4 +194,19 @@ background-color:rgb(253, 225, 193);
     .contact-left{
         width: 100%;
     }
+}
+.section-three{
+    min-height: 100vh;
+    height: auto;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    justify-content: center;
+    gap: 30px;
+}
+.card{
+    width: 400px;
+    height: 80vh;
+    background-color: rgba(0, 123, 255, 0.664);
+    margin:  40px auto;
+    
 }
