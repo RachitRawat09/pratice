@@ -105,6 +105,29 @@ body{
     filter: drop-shadow(5px 5px 20px rgba(168, 160, 160, 0.632)) ;
 }
 
+.section-two .right img {
+    position: relative;
+    animation: move 2s linear infinite alternate; /* Animation */
+    filter: drop-shadow(5px 5px 20px rgba(168, 160, 160, 0.632)) ;
+}
+
+.section-two .left h2{
+    font-size: 4rem;
+    color: rgb(253, 225, 193);
+
+}
+.section-two .left h4{
+color: white;
+}
+.section-two .left button{
+margin-top: 20px;
+padding: 10px;
+border-radius: 4mm;
+font-size: 17px;
+font-weight: 600;
+background-color:rgb(253, 225, 193); 
+}
+
 /* Keyframes for motion */
 @keyframes move {
     0% { transform: translateY(0); }
