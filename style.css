@@ -13,7 +13,7 @@ body{
 }
 .navContainer{
     width: 100%;
-    position: fixed;
+    position:relative;
     z-index: 3;
      
 }
@@ -71,32 +71,44 @@ body{
       padding: 10px;
       border-radius: 4mm;
 }
-.content{
+.section{
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
     align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2,1fr);
     background-color: rgb(62, 45, 26);
-    padding: 40px 0px;
+    margin: auto;
 }
-.content-right h2{
-        font-size: 50px;
+.right h2{
+        font-size: 4rem;
         color: rgb(253, 225, 193);
 
 }
-.content-right h4{
+.right h4{
  color: white;
 }
-.content-right button{
+.right button{
     margin-top: 20px;
     padding: 10px;
     border-radius: 4mm;
     font-size: 17px;
     font-weight: 600;
     background-color:rgb(253, 225, 193); 
+}
+.left{
+    margin: auto;
+}
+.left img {
+    position: relative;
+    animation: move 2s linear infinite alternate; /* Animation */
+    filter: drop-shadow(5px 5px 20px rgba(168, 160, 160, 0.632)) ;
+}
 
+/* Keyframes for motion */
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); } /* Moves right 50px */
 }
 .contact{
     width: 100%;
