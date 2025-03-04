@@ -13,7 +13,7 @@ tl.from('.main-content ',{
     stagger:0.3,
     ease: "power2.inOut"
 })
-var t2=gsap.scrollTrigger()
-t2.from('',{
-    
-})
+
+// gsap.from('.section '{
+//     scrolltrigger()
+// })
