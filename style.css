@@ -76,7 +76,7 @@ body{
     height: 100vh;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,minmax(400px,1fr));
     background-color: rgb(62, 45, 26);
     margin: auto;
 }
@@ -187,12 +187,15 @@ background-color:rgb(253, 225, 193);
     width: 80%;
 }
 
-@media (max-width: 500px){
+@media (max-width: 480px){
     .contact-right{
         display: none;
     }
     .contact-left{
         width: 100%;
+    }
+    .section-one{
+        grid-template-rows: repeat(2,1fr);
     }
 }
 .section-three{
