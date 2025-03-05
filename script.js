@@ -1,44 +1,43 @@
-var tl=gsap.timeline()
-tl.from('.logo,.nav-items li ',{
-    y:-30,
-    duration:0.5,
-    opacity:0,
-    stagger:0.3,
+var tl = gsap.timeline();
+tl.from('.logo,.nav-items li', {
+    y: -30,
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.3,
     ease: "power2.inOut"
-})
-tl.from('.main-content ',{
-    y:-30,
-    duration:0.5,
-    opacity:0,
-    stagger:0.3,
+});
+tl.from('.main-content', {
+    y: -30,
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.3,
     ease: "power2.inOut"
-})
+});
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// ✅ FIXED Swiper.js CODE
+const swiper = new Swiper('.swiper-wrapper', { // <- Change to .swiper
+    direction: 'horizontal', // <- Vertical se horizontal kar diya
+    loop: true,
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true // <- Pagination clickable banaya
+    },
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+    breakpoints: {
+        0: {
+            slidesPerView: 1 // <- Fixed Typo
+        },
+        620: {
+            slidesPerView: 2 // <- Fixed Typo
+        },
+        1024: {
+            slidesPerView: 3 // <- Fixed Typo
+        }
+    }
+});
