@@ -6,7 +6,462 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+
+}
+.logo{
+    width: 60px;
+    border-radius: 50%;
+}
+.navContainer{
+    width: 100%;
+    position:relative;
+    z-index: 3;
+     
+}
+.navContent{
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-items {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    list-style: none;
+}
+.nav-items li {
+    cursor: pointer;
+}
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+@media screen and (max-width: 768px) {
+    .navContent{
+       padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        gap: 10px;
+        width: 50%;
+        background: rgba(28, 25, 22, 0.652);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+    .nav-items li{
+        padding: 10px;
+    }
+    .nav-items li:hover{
+       background-color: #333;
+    }
+    .nav-items.active {
+        display: flex;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: block;
+        z-index: 3;
+    }
+}
+.main-body{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+.main-container{
+    background: url('assests/backgroun.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-content-box{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    align-items: center;
+    text-align: center;
+
+    z-index: 1;
+   
+
+}
+.main-content h1{
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-content button{
+    margin-top: 10px;
+      padding: 10px;
+      border-radius: 4mm;
+}
+
+/* ****************section************ */
+
+.section{
+    width: 100%;
+   height: 100%;
+   padding: 40px 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(62, 45, 26);
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+}
+.right h2{
+    font-size: 4rem;
+        color: rgb(253, 225, 193);
+
+}
+.right h4{
+ color: white;
+}
+.right button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4mm;
+    font-size: 17px;
+    font-weight: 600;
+    background-color:rgb(253, 225, 193); 
+    
+}
+
+.left img {
+    position: relative;
+    width: 100%;   /* Image takes full width of its container */
+    height: auto;  /* Maintains aspect ratio */
+    max-width: 500px; /* Optional: Prevents the image from becoming too large */
+    display: block;
+    animation: move 2s linear infinite alternate; /* Animation */
+    filter: drop-shadow(5px 5px 20px rgba(168, 160, 160, 0.632)) ;
+}
+
+
+
+
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); } /* Moves right 50px */
+}
+
+@media (max-width: 500px){
+    .right h2{
+        font-size: 2.5rem;
+           
+    
+    }
+    .right h4{
+        font-size: 12px;
+       }
+}
+@media (max-width: 200px){
+    .right h2{
+        font-size: 1.5rem;
+           
+    
+    }
+}
+
+/*********** contact******************* */
+
+.contact{
+    width: 100%;
+    height: auto;
+    
+    /* background-image: url('assests/backgroun.jpg'); */
+    background-color: rgb(248, 231, 212);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contact-container{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.contact-content{
+    padding: 30px;
+    background-color: rgba(35, 26, 16, 0.971);
+    border-radius: 5mm;
+    display: flex;
+    width: 60%;
+}
+.contact-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.contact-right{
+    width: 50%;
+}
+.contact-right img{
+    width: 100%;
+    object-fit: cover;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+.contact-form input,textarea{
+    padding: 3px;
+    background-color: rgb(245, 235, 220);
+    width: 80%;
+}
+
+@media (max-width: 480px){
+    .contact-right{
+        display: none;
+    }
+    .contact-left{
+        width: 100%;
+    }
+    .section-one{
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+/* ***********slider************8 */
+.conatiner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193, 181, 181);
+    overflow: hidden;
+}
+.card-list .card-item .user-image{
+    width: 350px;
+    height: 250px;
+   margin: auto;
+   border-radius: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+
+}
+
+.card-list .card-item{
+    color: white;
+    background-color: rgba(20, 19, 19, 0.632);
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-list .card-item .user-name{
+    font-size: 2.5rem;
+    margin: 5px 0;
+    
+}
+.card-list .card-item .user-profession{
+    font-size: 1.5rem;
+    margin: 10px 0;
+
+}
+.card-list .card-item  .message-button{
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: rgb(20, 20, 87);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.card-list .card-item  .message-button:hover{
+    color: white;
+    border: 2px solid rgb(20, 20, 87);
+    background-color: rgb(20, 20, 87);
+}
+
+/* ***********footer *************/
+
+.footer {
+    width: 100%;
+    background-color: rgb(40, 28, 15);
+    color: white;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+
+.footer-header {
+    max-width: 200px;  
+    margin: 0px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-slogan {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.footer-links div {
+    text-align: center;
+    min-width: 150px;
+}
+
+.footer-links a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgb(245, 235, 220);
+    color: black;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-icons a:hover {
+    background-color: rgb(253, 225, 193);
+    transform: scale(1.5);
+}
+
+.copyright {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+
+@media (max-width: 1024px) {
+    .footer-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .footer-links {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        
+    }
+}
+@media (max-width: 400px) {
+.footer-links {
+width: 100%;
+}}
+@media (max-width: 250px) {
+    .footer-links {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        font-size: 18px;
+    }
+
+    .footer-slogan {
+        font-size: 12px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+}
+
+    </style>
     
 </head>
 <body>
@@ -216,6 +671,70 @@
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+  let navItems = document.querySelector(".nav-items");
+  let toggleButton = document.querySelector(".menu-toggle");
+  
+  if (navItems.style.display === "none" || navItems.style.display === "") {
+      navItems.style.display = "flex";
+      setTimeout(() => {
+          navItems.classList.add("active");
+      }, 10);
+      toggleButton.innerHTML = "&#10006;"; // Cross icon
+  } else {
+      navItems.classList.remove("active");
+      setTimeout(() => {
+          navItems.style.display = "none";
+      }, 300);
+      toggleButton.innerHTML = "&#9776;"; // Hamburger icon
+  }
+}
+
+var tl=gsap.timeline()
+tl.from('.logo,.nav-items li ',{
+    y:-30,
+    duration:0.5,
+    opacity:0,
+    stagger:0.3,
+    ease: "power2.inOut"
+});
+tl.from('.main-content', {
+    y: -30,
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut"
+});
+
+// ✅ FIXED Swiper.js CODE
+const swiper = new Swiper('.slider-wrapper', { // <- Change to .swiper
+   
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true // <- Pagination clickable banaya
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1 // <- Fixed Typo
+        },
+        620: {
+            slidesPerView: 2 // <- Fixed Typo
+        },
+        1024: {
+            slidesPerView: 3 // <- Fixed Typo
+        }
+    }
+});
+
+    </script>
 </body>
 </html>
